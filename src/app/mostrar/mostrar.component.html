@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>Listado peticiones de contacto</h1>
+    <br>
+    <div class="row">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Mensaje</th>
+                </thead>
+                <tbody>
+                    @for(contacto of contactos; track contacto.email){
+                        <tr>
+                            <td>{{contacto.nombre}}</td>
+                            <td>{{contacto.email}}</td>
+                            <td>{{contacto.mensaje}}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

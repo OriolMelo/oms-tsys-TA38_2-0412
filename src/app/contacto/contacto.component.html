@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2 mb-3"></div>
+        <div class="col-md-6 mb-3">
+            <h1>Formulario de contacto</h1>
+        </div>
+    </div>
+    <br>
+    <form>
+        <div class="row">
+            <div class="col-md-2">
+                <label for=""><strong>Nombre</strong></label>
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-control" placeholder="Nombre y apellido" [(ngModel)]="nombre" name="nombre" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 mb-3"></div>
+            <div id="errorName" class="col-md-4 mb-3 error hidden">Introduzca su nombre y apellido</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <label for=""><strong>Email</strong></label>
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-control" placeholder="ejemplo@dominio.com" [(ngModel)]="email" name="email" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 mb-3"></div>
+            <div id="errorEmail" class="col-md-4 mb-3 error hidden">Introduzca un email valido</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label for=""><strong>Mensaje</strong></label>
+            </div>
+            <div class="col-md-4">
+                <textarea class="form-control" [(ngModel)]="mensaje" name="mensaje" required> </textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 mb-3"></div>
+            <div id="errorMensaje" class="col-md-4 mb-3 error hidden">Introduzca un mensaje</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label for=""><strong>2 + 3 = ?</strong></label>
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-control" placeholder="Respuesta" [(ngModel)]="respuesta" name="respuesta" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 mb-3"></div>
+            <div id="errorSpam" class="col-md-4 mb-3 error hidden">Validacion anti-spam incorrecta</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 mb-3">
+            </div>
+            <div class="col-md-2 mb-3">
+                <button class="btn btn-primary" type="submit" (click)="contactar()">Enviar</button>
+            </div>
+        </div>
+    </form>
+</div>
